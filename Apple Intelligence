@@ -1,0 +1,32 @@
+Apple Intelligence
+
+Apple intelligence is the personal intelligence system that puts powerful generative models right at the core of your iPhone, iPad, and Mac and powers incredible new features 
+to help users communicate, work and express themselves. 
+
+You can bring these Apple Intelligence features right into your apps. 
+
+1. What is generative models?
+Generative models are a type of machine learning model that can create new data that is similar to the data it was trained on. 
+They are stastical models that use probability distributions to generate new datasets. 
+Generative models work by learning the underlying patterns and distributions of data, and then using that information to generate new, 
+similar data. This is similar to teaching a computer to create its own data based on what it has seen before
+
+2. Define different Apple intelligence features.
+  1. Writting Tools
+  2. Image playground 
+  3. Genmoji
+  4. Siri with AppIntents 
+
+3. Explain about writing tools?
+Writing tools are available system-wide, and help users rewrite, proofrea, and summarize text. If you're using any of the standard UI frameworks to render text fields, your app will automatically
+get the ability to use writing tools. and with the TextView delegate API, you can customise how you want your app to behave while writing tools is active.
+For example, by pausing syncing to avoid conflicts while Apple Intelligence is processing text. 
+
+4. Explain about the Image playground. 
+Image playground delivers an easy-to-use experience to create fun, playful images in apps like messsages, notes, keynote, pages and more. 
+Using the image playground API, you can add the same experience to your app and enable your users to quickly create delightful images using context from within your app. 
+And because images are created entirely on device, you don't have to develop or host your own models for your users to enjoy creating new images in your app. 
+
+5. Genmoji 
+Genmoji opens up entirely new ways to communicate, letting users create a new emoji to match any moment. While emoji are represented as inline images. If you are using standard UI 
+frameworks to render textfields, you can support Genmoji easily. 
