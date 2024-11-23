@@ -30,3 +30,5 @@ And because images are created entirely on device, you don't have to develop or 
 5. Genmoji 
 Genmoji opens up entirely new ways to communicate, letting users create a new emoji to match any moment. While emoji are represented as inline images. If you are using standard UI 
 frameworks to render textfields, you can support Genmoji easily. 
+
+
