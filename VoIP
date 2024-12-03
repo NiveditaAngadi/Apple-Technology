@@ -1,0 +1,47 @@
+https://developer.apple.com/library/archive/documentation/Performance/Conceptual/EnergyGuide-iOS/OptimizeVoIP.html
+https://www.linkedin.com/pulse/how-implement-voip-ios-guide-callkit-pushkit-wagner-assis-ikhtf/
+
+Voice over Internet Protocol (VoIP)
+
+1. What is VoIP?
+Technology that allows users to make phone calls and video conferences over the internet instead of traditional phone line. 
+
+VoIP is also known as IP telephony. 
+
+2. What are the advantages of VoIP?
+1. Cost: VoIP is often cheaper than traditional phone calls.
+2. Flexibility: VoIP is more flexible than landlines, and it'e easier to add lines. 
+3. Features: VoIP plans often include features like auto-attendant, call queuing, and conference calls.
+
+3. Disadvantages of VoIP?
+Internet Connection: VoIP is dependent on a reliable internet connection and power source.
+Cyber attacks: VoIP is vulnerable to cyber attacks, unlike landlines.
+Service disruptions: VoIP is vulnerable to service disruptions. 
+
+4. SDK's which helps to implement the VoIP in iOS.
+1. PushKit 
+2. CallKit 
+3. AVAudioSession 
+
+1. PushKit: APIs that allows an app to receive pushes (notifications when data is available) from a remote server. 
+Whenever a push is received, the app is called to action. For example, a VoIP app could display an alert when a call is received, 
+and provide an option to accept or reject the call. It could even begin taking precursory steps to initiate the call, in the event the user decides to accept.\
+
+PushKit VoIP support is available in iOS 8 and later.
+
+Handles VoIP push notifications, enabling the app to wake up for incoming calls, even when it’s in the background.
+
+2. CallKit: Manages the call UI, allowing your VoIP app to integrate with the native phone experience
+The CallKit framework provides a familiar, native interface for handling calls in your VoIP app. 
+It makes your app look and behave like the standard phone app, allowing you to display incoming and outgoing calls using the same UI.
+
+3. AVAudioSession: Manages audio playback and recording, essential for controlling the audio input/output during VoIP calls.
+To ensure that audio is handled properly during calls, you’ll need to configure AVAudioSession. 
+This framework lets you manage audio routing and control the microphone and speaker settings for voice communication.
+
+
+
+
+
+
+
