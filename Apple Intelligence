@@ -32,3 +32,51 @@ Genmoji opens up entirely new ways to communicate, letting users create a new em
 frameworks to render textfields, you can support Genmoji easily. 
 
 
+Reference:
+WWDC24 
+Apple Intelligence - Explore machine learning on Apple Platforms. 
+
+Writing Tools -> Proof reading and summarization, Processed on device, Text and web view integration
+Image playground -> Image creation model 
+Siri -> Sound more natural, Contextually relevant, and more personal - App 
+
+Apple provides set of API's which you can kick start the ML/Apple inteligence implementation without statically importing the models. 
+API's are, 
+Vision Framework - capabilities for visual intelligence, including text extraction, face detection, body pose recognition, and much more.
+Swift API for Vision framework in Swift 6. 
+Hand pose detection and body pose requests and aesthetic score requests. 
+Reference: Discover Swift enhancements in the Vision framework” video.
+
+Natural Language multiligual models 
+Customize on-device speech recognition
+Analyse and identify the sound - Sound Analysis
+Language translation - Lanuguage to language translation with simple UI. Flexible API, batch up request. 
+Object detection. 
+Barcode detection 
+Image similarity analysis
+Language detection 
+Matte effects
+Horizon detection
+People and places identification
+Text similarity analysis
+Image classification 
+Object tracking 
+Recognizing animals
+Face capture ranking 
+Edge detection 
+Speech Recognition 
+real-time face tracking 
+applying visual effects 
+Object trajectory tracking 
+Aliging similar images
+person segementation 
+Sailent areas of interest highlighting 
+Extracting phone numbers
+
+
+You can customize or create your ML model with "Create ML" app. 
+You can run your own models in your device. 
+Train -> Prepare -> Integrate 
+
+
+
