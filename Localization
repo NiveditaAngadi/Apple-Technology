@@ -1,0 +1,18 @@
+Reference: 
+https://developer.apple.com/documentation/xcode/supporting-multiple-languages-in-your-app
+
+Supporting multiple languages in your app
+
+1. To make your app multilingual, 
+The first step to making your app multilingual is to internationalize your code to handle different languages and regional conventions.
+you first need to internationalize it. This process involves preparing assets in your app so that 
+a localizer can translate them into different languages and regional conventions. 
+For example, dates in some countries appear in a day-month-year format, while in others, the month comes first.
+
+2. After you internationalize your app, you need to localize it. 
+Localization is the process of translating your assets into other languages for various regions.
+During this process, you export the relevant strings and other resources from your app, 
+and give them to a localizer for translation. 
+The localizer gives you back translated versions of your assets, which you import into your app.
+You then test the translations in your app to make sure everything works.
+
