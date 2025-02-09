@@ -1,0 +1,57 @@
+Let's discuss features and frameworks that introduced in the iOS 18. 
+
+1. Swift Testing 
+Swift Testing is a new framework with a new and refreshing approach to testing. 
+Swift Testing contains modern features such as macros, which work with structs instead of classes and can tag tests and test suites. 
+
+Swift Testing is available from iOS 18 and requires Xcode 16, meaning you can use it to test your Swift code on iOS 18 and later versions. 
+
+@Test("Test view model increment function", .enabled(if: AppSettings.CanDecrement), 
+   .tags(.critical))
+func testViewModelIncrement() async throws {
+// Preparation
+let viewmodel = CounterViewModel() 
+viewmodel.count = 5 
+
+// execution 
+viewmodel.increment(by: 1)
+
+// verification 
+#expect(viewmodel.count == 6) 
+}
+
+2. SwiftData 
+SwiftData was introduced in WWDC 2023, as part of iOS 17, and its goal was to replace old but popular Core Data framework. 
+
+SwiftData provides a modern API based on Swift, which can help reduce friction when working with persistent stores. 
+
+Data model 
+@Model 
+class Book {
+ var author: String 
+ var title: String 
+ var publishedDate: Date 
+}
+
+Relationships 
+Deletion Rules 
+
+iOS 18 introduces 
+a. Unique value. 
+Ability to construct  a unique value for the model based on its attributes. 
+#Unique<Book>([\.name, \.publicationName])
+
+b. History API 
+Using History API, we can fetch transactions and changes that have been made to our Swift Datastore over a particular time range. This capability
+allows us to update our app when we work with extensions such as widgets or sync changes to the server. 
+
+c. Custom data stores to SwiftData 
+For example, We start by creating a new data store configuration specifically for CSV data stores. 
+
+3. Zoom transition 
+In iOS 18, Apple added a new transition that allows us to navigate to a new view using a zoom animation. 
+
+4. Adding floating tab bar 
+
+
+
