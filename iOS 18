@@ -52,6 +52,53 @@ For example, We start by creating a new data store configuration specifically fo
 In iOS 18, Apple added a new transition that allows us to navigate to a new view using a zoom animation. 
 
 4. Adding floating tab bar 
+In iPadOS18, the position of the sidebar can be adapted to side and top, using the tabViewStyle (.sidebarAdaptable)
+
+5. More control over scroll views. 
+Why is handling scroll views in SwiftUI more complex than in UIKit?
+1. SwiftUI is relatively new: SwiftUI is still considered to be a new framework. 
+2. Flexibility: Due to the imperative approach, UIKit gives us direct control over views. This means that we can adjust particular view parameters based
+on the scroll state. 
+SwiftUI's declarative nature sometimes makes achieving the same level of control challenging - we don't have direct access to views. 
+We can adjust their state using a @State variable or a view modifier. 
+
+onScrollGeometryChange - view modifier that allows us to observe any change in the scroll position. 
+
+6. Observing item's visibility 
+by -> onScrollVisibilityChange 
+
+7. TextRenderer 
+A protocol that can help us change the default behavior of our texts in SwiftUI. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
