@@ -1,0 +1,11 @@
+iPhone Sensors
+1. Accelerometer: Detects your phone's movements in three axes - ideal for fitness tracking or game development. 
+2. Gyroscope: Measures rotation - perfect for smooth UI orientation changes. 
+3. Magnetometer: Detects magnetic fields - this powers your compass app. 
+4. Barometer: Measures altitude - Measures altitude - ever wondered how your hiking app knows your elevation? 
+
+Apple watch Sensors
+1. Heart rate sensor: Tracks your pulse during workouts or those high stress meetings. 
+2. Blood oxygen sensor(SpO2): Monitors your blood oxygen stright outta star trek. 
+3. Electrocardiogram (ECG): Gives you a quick heart rhythm checkup directly from your wrist.
+
