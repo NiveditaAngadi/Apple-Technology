@@ -1,0 +1,47 @@
+tvOS has been introduced by Apple in 2015. 
+
+Original Apple TV was a set-top box that provides users with a simplistic user interface designed primarily 
+for navigating and viewing video content. 
+Apple TV expands to full-blown apps for things like shopping and even games.
+tvOS is the operating system for developing apps for AppleTV.
+tvOS is built upon iOS and lends many of the same frameworks. 
+
+Apple has provided three methods of developing apps on tvOS. 
+1.TVML apps: The first uses an entirely new process utilizing TVML, TVJS and TVMLKit. 
+2. Custom apps: The second uses familiar iOS frameworks and concepts you know and love like Storyboards, UIKit, and Auto Layout.
+3. SwiftUI
+
+When you develop an Apple TV app, it will be a separate target which implies that tvOS apps would be a separate purchase for customers
+
+*** TVML Apps *** 
+TVML is a form of XML and stands for "Television Markup Langauage" 
+TVJS is set of JavaScript APIs which provide you with the means to display apps created with TVML. 
+TVMLKit is the glue between TVML, JavaScript, and native tvOS application. 
+
+Your server -> TVML -> TVJS -> Data 
+Connects to the 
+tvOS app
+
+Apple provides set of built in templates in TVMLKit such as, 
+Showcase Template 
+Menu bar Template 
+
+What is TVML?
+Every page in a client-server app is built on an Apple TV Markup language (TVML)template. 
+TVML templates define what elements can be used and in what order.
+Each template designed to display information in a specific way. 
+Templates available are, 
+1. loading template - to show spinner and quick description. 
+
+
+
+
+
+
+
+
+
+
+
+
+
