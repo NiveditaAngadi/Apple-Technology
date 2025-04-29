@@ -1,0 +1,112 @@
+References:
+https://developer.apple.com/documentation/EventKit
+
+1. What is EventKit?
+The eventkit framework provides access to calendar and reminders data so people can create, retrieve, and edit calender items in your app. 
+
+2. What is EventKitUI?
+EventKitUI provides user interfaces you can implement in your app so people can create and edit calendar items. 
+
+3. Usage of eventkit?
+You can use EventKit to set up alarms and create recurring events.
+And if a change to the Calendar database occurs from outside your app, EventKit detects the change and sends a notification, allowing your app to 
+stay up to date. 
+
+4. What is EventStore?
+EKEventStore - An object that accesses a person's calendar events and reminders and supports the scheduling of new events.
+
+5. How can I access the calendar data in my app?
+First ask the permission from a user to access the calendar data, before access the calendar database. 
+Your app must never directly modify the calendar database on its own. 
+EKEventStore is the app's way of accessing calendar and reminder data. 
+
+6. What are the different permission types?
+1. Write-only access 
+2. Full access (read and write) 
+
+7. What is Write-only access?
+You can request write-only access to events, which lets your app create new events but doesn't let it read any events or other calendar
+information, including events your app created. 
+
+8. What is full access?
+You can request full access to either events or reminders, which lets your app create, view, edit, and delete data. 
+
+9. What's the procedure to receive event or reminder data?
+ 1. To receive event or reminder data, you must request access to an entity type after initializing the event store. 
+ 2. To request access to reminders, use - "requestFullAccessToReminders(completion:) 
+ 3. To request access to events, use - "requestFullAccessToEvents(completion:) - depending on the level of access your aopp needs. 
+
+10. What is EventKitUI? 
+EventKitUi presents chooser and editor UI outside of your app's process on iOS 17 and later. 
+The chooser and editor UI has full access to calendars on the device regardless of the access granted to your app. 
+If your app needs to present UI for creating and editing calendar events, consider using EventKitUI instead of requesting full 
+access to calendar data. 
+
+11. How do you create an event?
+Create an event, then present an "EKEventEditViewController" to allow people to edit and save the event. 
+"EKEventEditViewController" saves the event to the calendar the person requests in the editor UI. 
+
+12. How iOS makes sure that user privacy while accessing the calendar event?
+An iOS app must include in its Info.plist file the usage description keys for the types of data it needs to access.
+On iOS 17 and later, to access a person’s calendar events or reminders, you need to inclure descriptions for, 
+1. NSCalendarWriteOnlyAccessUsageDescription or NSCalendarsFullAccessUsageDescription
+2. NSRemindersFullAccessUsageDescription - for reminder access 
+
+Because these keys provide access to the event store, they protect the person’s privacy by only allowing access to this information if they explicitly grant permission in the app.
+
+13. How do you create an event?
+Once you have permission to access a person's Calendar and Reminder data, you can create, display, and edit events and reminders. 
+Create a new event with the init(eventStore:) method of the EKEvent class. 
+
+14. Can you edit the details of a new event or an event you previously fetched from the Calendar database?
+You can edit the details of a new event or an event you previously fetched from the Calendar database by setting the event’s corresponding properties. 
+
+Some of the details you can edit, 
+1. event title 
+2. event's start date or end dates 
+3. The calendar with which the event is associated with the calendar property 
+4. The alarms associated with the event with the alarms property. 
+5. The event's recurrence rule, if its a repeating event, with the recurrence Rules property. 
+
+15. How do you save the event data?
+By the EKEventStore method - save(_:span:commit:) 
+
+16. How can you remove the event from the calendar?
+By the EKEventStore method - remove(_:span:commit:)
+
+In save and remove event methods, implementing the respective method automatically syncs your changes with the calendar the event belongs to 
+such as CalDAV, Exchange, GoogleCalendar and so on.
+
+17. How can you create reminders?
+Remiders are tasks that may be tied to a specific time or location. 
+They can be marked complete and may not necessarily span an exact period of time. 
+
+EKReminder inherits from EKCalendarItem, you can perform the same methods on a reminder as you would on an event, such as adding an alarm with 
+addAlarm(_:) or setting a recurrence rule with addRecurrenceRule(_:).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
