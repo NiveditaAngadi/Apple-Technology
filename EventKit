@@ -84,15 +84,66 @@ They can be marked complete and may not necessarily span an exact period of time
 EKReminder inherits from EKCalendarItem, you can perform the same methods on a reminder as you would on an event, such as adding an alarm with 
 addAlarm(_:) or setting a recurrence rule with addRecurrenceRule(_:).
 
+18. How can you retrieve the events and reminders?
+Fetch events and reminders from the Calendar database.
+To search for and return events and reminders from the Calendar database, you must connect to the event store. 
+There are two ways to retrieve events and reminders. You can fethc via, 
+1. Predicate or Search query, and return zero or more events that match a given query. 
+2. Unique identifier and returns a single event that corresponds to the given identifier. 
 
+19. Does retrieving events from the Calendar database does provide the events in chronological order?
+Retrieving events from the Calendar database does not necessarily return events in chronological order. 
+To sort an array of EKEvent objects by date, call sortedArray(using:) on the array, providing the selector for the compareStartDate(with:) method.
 
+20. Explain fetch events. 
+It's common to fetch events and reminders that fall within a date range. 
+The EKEventStore method events(matching:): fetches all events that fall within the date range specified in the predicate you provide.
 
+21. Is Event matching method synchronous or asynchronous?
+The events(matching:) method is synchronous, 
+you may not want to run it on your app’s main thread. For asynchronous behavior, 
+run the method on another thread with the dispatch_async function or with an Operation object.
 
+22. How do you update the app with the changes in the calendar events or reminders?
+Register for notifications about changes and keep your app up to date. 
+An EKEventStore object posts an "EKEventStoreChangedNotification", notification whenever it detects changes to the Calendar database. 
+Register for this notification if your app handles event or reminder data. 
 
+NotificationCenter.default.addObserver(self, selector: Selector("storeChanged:"), name: .EKEventStoreChanged, object: eventStore)
 
+23. What would be the response for the notifications?
+When you receive an "EKEventStoreChangeNotification" notification, it's possible the objects you've fetched - such as an "EKEvent". 
+"EKReminder", or "EKCalendar" - have changed. 
+Your local data is often invalidated or incomplete when a change occurs in the Calendar database, you should refetch your 
+current date range of events whenever you receive an event store changed notification. 
+If you are modifying an event and do not want to refetch it unless it is absolutely necessary, 
+call the refreshSourcesIfNecessary() method on the event.
+If the method returns YES, you can continue to use the event; otherwise, you must refetch it. 
 
+24. Can you update or add Participants of the event?
+Do not create EKParticipant objects directly. Instead, use the property attendees on "EKCalendarItem" to return an array
+of "EKParticipant" objects. 
+EventKit cannot add participants to an event nor change participant information. 
+Use the properties in this class to get information about a participant.
 
+A participant can be a person, group, room, or other resource.
 
+25. Explain EventKit UI. 
+Display an interface for viewing, selecting and editing calendar events and reminders.
+On iOS, use the EventKitUI framework to show calendar and reminder information to the user modally. 
+EventKitUI provides view controllers for viewing and editing calendar and reminder information, choosing 
+which calendar to view, and for determining whether to present calendars as read-only or readable and writable. 
+The view controllers you’ll use on iOS are:
+
+EKEventViewController, for displaying existing events.
+
+EKEventEditViewController, for creating, editing, or deleting events.
+
+EKCalendarChooser, for selecting one or more calendars, and to determine whether a calendar has read-only or read-write access.
+
+You present these interfaces from within your app. Upon presentation, the system manages all interactions with the user, notifying you when the interfaces are dismissed.
+
+EventKitUI also provides several configurable classes for selecting a default calendar, displaying buttons, or to enabling the user to select one or more calendars.
 
 
 
